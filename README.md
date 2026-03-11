@@ -1,7 +1,7 @@
-[![Release](https://img.shields.io/github/release/bcgsc/abyss.svg)](https://github.com/bcgsc/abyss/releases)
-[![Downloads](https://img.shields.io/github/downloads/bcgsc/abyss/total?logo=github)](https://github.com/bcgsc/abyss/releases/download/2.3.10/abyss-2.3.10.tar.gz)
+[![Release](https://img.shields.io/github/release/BirolLab/abyss.svg)](https://github.com/BirolLab/abyss/releases)
+[![Downloads](https://img.shields.io/github/downloads/BirolLab/abyss/total?logo=github)](https://github.com/BirolLab/abyss/releases/download/2.3.10/abyss-2.3.10.tar.gz)
 [![Conda](https://img.shields.io/conda/dn/bioconda/abyss?label=Conda)](https://anaconda.org/bioconda/abyss)
-[![Issues](https://img.shields.io/github/issues/bcgsc/abyss.svg)](https://github.com/bcgsc/abyss/issues)
+[![Issues](https://img.shields.io/github/issues/BirolLab/abyss.svg)](https://github.com/BirolLab/abyss/issues)
 
 ABySS
 ================================================================================
@@ -77,8 +77,8 @@ Dependencies
 
 ## Dependencies for linked reads
 
-- [ARCS](https://github.com/bcgsc/arcs) for scaffolding.
-- [Tigmint](https://github.com/bcgsc/tigmint) for correcting assembly errors.
+- [ARCS](https://github.com/BirolLab/arcs) for scaffolding.
+- [Tigmint](https://github.com/BirolLab/tigmint) for correcting assembly errors.
 
 These can be installed through Conda:
 
@@ -120,7 +120,7 @@ The following libraries are required:
 * [Boost](http://www.boost.org/)
 * [Open MPI](http://www.open-mpi.org)
 * [sparsehash](https://code.google.com/p/sparsehash/)
-* [btllib](https://github.com/bcgsc/btllib)
+* [btllib](https://github.com/BirolLab/btllib)
 
 Conda:
 
@@ -325,7 +325,7 @@ contribute towards the consensus sequence.
 
 ## Scaffolding with linked reads
 
-ABySS can scaffold using linked reads from 10x Genomics Chromium. The barcodes must first be extracted from the read sequences and added to the `BX:Z` tag of the FASTQ header, typically using the `longranger basic` command of [Long Ranger](https://support.10xgenomics.com/genome-exome/software/overview/welcome) or [EMA preproc](https://github.com/arshajii/ema#readme). The linked reads are used to correct assembly errors, which requires that [Tigmint](https://github.com/bcgsc/tigmint). The linked reads are also used for scaffolding, which requires [ARCS](https://github.com/bcgsc/arcs). See [Dependencies](#dependencies) for installation instructions.
+ABySS can scaffold using linked reads from 10x Genomics Chromium. The barcodes must first be extracted from the read sequences and added to the `BX:Z` tag of the FASTQ header, typically using the `longranger basic` command of [Long Ranger](https://support.10xgenomics.com/genome-exome/software/overview/welcome) or [EMA preproc](https://github.com/arshajii/ema#readme). The linked reads are used to correct assembly errors, which requires that [Tigmint](https://github.com/BirolLab/tigmint). The linked reads are also used for scaffolding, which requires [ARCS](https://github.com/BirolLab/arcs). See [Dependencies](#dependencies) for installation instructions.
 
 ABySS can combine paired-end, mate-pair, and linked-read libraries. The `pe` and `lr` libraries will be used to build the de Bruijn graph. The `mp` libraries will be used for paired-end/mate-pair scaffolding. The `lr` libraries will be used for misassembly correction using Tigmint and scaffolding using ARCS.
 
@@ -517,7 +517,7 @@ ABySS programs
  * `abyss-todot`: convert graph formats and merge graphs
  * `abyss-rresolver`: resolve repeats using short reads
 
-This [flowchart](https://github.com/bcgsc/abyss/blob/master/doc/flowchart.pdf) shows the ABySS assembly pipeline and its intermediate files.
+This [flowchart](https://github.com/BirolLab/abyss/blob/master/doc/flowchart.pdf) shows the ABySS assembly pipeline and its intermediate files.
 
 Export to SQLite Database
 ================================================================================
@@ -600,7 +600,7 @@ Nielsen, Cydney B., Shaun D. Jackman, Inanc Birol, and Steven JM Jones (2009).
 Support
 ================================================================================
 
-[Create a new issue on GitHub.](https://github.com/bcgsc/abyss/issues)
+[Create a new issue on GitHub.](https://github.com/BirolLab/abyss/issues)
 
 [Ask a question on Biostars.](https://www.biostars.org/tag/abyss/)
 
@@ -620,4 +620,4 @@ Authors
 
 Supervised by [**Dr. Inanc Birol**](http://www.bcgsc.ca/faculty/inanc-birol).
 
-Copyright 2016-present Canada's Michael Smith Genome Sciences Centre
+Copyright 2016-present BC Cancer Research Institute

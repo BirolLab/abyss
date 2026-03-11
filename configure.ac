@@ -1,6 +1,6 @@
 AC_PREREQ(2.62)
 AC_INIT(ABySS, 2.3.10, abyss-users@bcgsc.ca, abyss,
-		http://www.bcgsc.ca/platform/bioinfo/software/abyss)
+		https://github.com/BirolLab/abyss)
 
 AC_CONFIG_MACRO_DIR([m4])
 m4_include(m4/m4_ax_pthread.m4)

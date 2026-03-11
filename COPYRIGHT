@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ABySS
 Upstream-Contact: Shaun Jackman <sjackman@gmail.com>
-Source: https://github.com/bcgsc/abyss
+Source: https://github.com/BirolLab/abyss
 
 License: GPL-3
  This program is free software: you can redistribute it and/or modify

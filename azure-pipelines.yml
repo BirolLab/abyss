@@ -103,7 +103,7 @@ jobs:
     displayName: Create Anaconda environment
   - script: |
       source activate abyss_CI
-      mamba install --yes -c conda-forge -c bioconda compilers=1.6.0 make boost-cpp sparsehash openmpi automake perl pandoc btllib 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
+      mamba install --yes -c conda-forge -c bioconda compilers=1.6.0 make boost-cpp=1.82 sparsehash openmpi automake perl pandoc btllib 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
     displayName: Install dependencies
   - script: |
       source activate abyss_CI
@@ -131,7 +131,7 @@ jobs:
     displayName: Create Anaconda environment
   - script: |
       source activate abyss_CI
-      mamba install --yes -c conda-forge -c bioconda compilers=1.5.2 make boost-cpp sparsehash openmpi automake perl pandoc btllib 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
+      mamba install --yes -c conda-forge -c bioconda compilers=1.5.2 make boost-cpp=1.82 sparsehash openmpi automake perl pandoc btllib 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
     displayName: Install dependencies
   - script: |
       source activate abyss_CI
@@ -159,7 +159,7 @@ jobs:
     displayName: Create Anaconda environment
   - script: |
       source activate abyss_CI
-      mamba install --yes -c conda-forge -c bioconda compilers=1.4.2 make boost-cpp sparsehash openmpi automake perl btllib pandoc 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
+      mamba install --yes -c conda-forge -c bioconda compilers=1.4.2 make boost-cpp=1.82 sparsehash openmpi automake perl btllib pandoc 'llvm-openmp<17.0.0' 'libcxx<17.0.0'
     displayName: Install dependencies
   - script: |
       source activate abyss_CI

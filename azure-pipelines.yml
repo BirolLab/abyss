@@ -171,15 +171,7 @@ jobs:
       ./configure CC=gcc-10 CXX=g++-10 --with-mpi=/usr/lib/openmpi --with-btllib=/home/vsts/work/1/s/btllib-1.7.2/install
       make -j12 distcheck
     displayName: Compiling ABySS with gcc-10
-  - script: |
-      curl https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-      sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-8 main"
-      sudo apt-get update
-      sudo apt-get install -y --no-install-recommends clang-format-8
-      sudo ln -sf clang-format-8 /usr/bin/clang-format
-    displayName: Install clang-format
-  - script: make clang-format
-    displayName: Run clang-format
+
 
 - job: linux_gcc9
   pool:
@@ -259,7 +251,7 @@ jobs:
   - script: |
       source activate abyss_CI
       conda install --yes -c conda-forge mamba python=3.9
-      mamba install --yes -c conda-forge -c bioconda compilers make boost-cpp sparsehash openmpi util-linux perl btllib pandoc
+      mamba install --yes -c conda-forge -c bioconda compilers make boost-cpp sparsehash openmpi util-linux perl btllib pandoc clang-format
     displayName: Install dependencies
   - script: |
       source activate abyss_CI
@@ -267,3 +259,5 @@ jobs:
       ./configure
       make -j12 distcheck AM_CXXFLAGS=-Wall CXXFLAGS='-pthread'
     displayName: Compiling ABySS with gcc
+  - script: make clang-format
+    displayName: Run clang-format
